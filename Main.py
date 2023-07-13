@@ -445,29 +445,27 @@ class Window(QtWidgets.QWidget):
         print(f'Time elapsed: {str(round((t1Single-t0Single)/60))} minutes')
 
     def closeEvent(self, event):
-        # reply = QtWidgets.QMessageBox.question(self, 'Window Close', 'Are you sure you want to close the window?',
-        #         QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No, QtWidgets.QMessageBox.No)
-
-        # if reply == QtWidgets.QMessageBox.Yes:
         MainConfig.saveConfig(MainConfig.fileName)
         event.accept()
-        # else:
-        #     event.ignore()
 
     def singleL1aClicked(self):
+        MainConfig.saveConfig(MainConfig.fileName)
         self.processSingle('L1A')
 
     def singleL1aqcClicked(self):
+        MainConfig.saveConfig(MainConfig.fileName)
         self.processSingle('L1AQC')
 
     def singleL1bClicked(self):
+        MainConfig.saveConfig(MainConfig.fileName)
         self.processSingle('L1B')
 
     def singleL1bqcClicked(self):
+        MainConfig.saveConfig(MainConfig.fileName)
         self.processSingle('L1BQC')
 
-
     def singleL2Clicked(self):
+        MainConfig.saveConfig(MainConfig.fileName)
         self.processSingle('L2')
 
     def processMulti(self, level):
